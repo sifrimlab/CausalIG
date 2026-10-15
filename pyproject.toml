@@ -1,0 +1,104 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "causalig"
+dynamic = ["version"]
+description = "CausalIG: attribution methods (Causal Integrated Gradients, Causal Expected Gradients) that separate direct and indirect causal effects in neural networks"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Joran Michiels", email = "joran.michiels@kuleuven.be" },
+    { name = "Anis Ismail", email = "anis.ismail@kuleuven.be" },
+]
+keywords = ["explainability", "attribution", "causal inference", "integrated gradients", "machine learning"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "torch>=2.0",
+    "numpy",
+]
+
+[project.optional-dependencies]
+shap = ["shap"]
+experiments = [
+    "captum>=0.7",
+    "matplotlib",
+    "sempler",
+    "scipy",
+]
+dev = [
+    "pytest>=7",
+    "pytest-cov",
+    "ruff",
+    "black",
+    "shap",
+]
+
+[project.urls]
+Homepage = "https://github.com/sifrimlab/CausalIG"
+Repository = "https://github.com/sifrimlab/CausalIG"
+Issues = "https://github.com/sifrimlab/CausalIG/issues"
+
+[tool.setuptools.dynamic]
+version = { attr = "causalig.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["causalig*"]
+
+[tool.setuptools.package-data]
+causalig = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+
+[tool.coverage.run]
+source = ["causalig", "experiments"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+precision = 1
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+]
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "N", "UP", "B", "C4", "SIM"]
+# E501 (line length) is handled by black. The N-series capital names (N, X, A,
+# E, K, W, ...) are intentional math notation throughout this ML codebase.
+# B905/B027/SIM108/SIM118/C408 are stylistic and not worth churn here.
+ignore = ["E501", "N803", "N806", "N812", "B905", "B027", "SIM108", "SIM118", "C408"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/**" = ["E402"]  # scripts adjust sys.path before importing
+"tests/**" = ["N802"]
+"scripts/run_synthetic_noise_floor_diagnostics.py" = ["N802"]  # experiment_A/B/C names mirror the paper appendix's labeling
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]

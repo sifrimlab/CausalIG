@@ -1,0 +1,36 @@
+/* Wider content column: the argument and shape tables need the room. */
+.wy-nav-content {
+  max-width: 980px;
+}
+
+/* The theme forces table cells onto one line, which pushes wide tables off
+   screen; let prose cells wrap instead. */
+.wy-table-responsive table td,
+.wy-table-responsive table th {
+  white-space: normal;
+}
+
+/* ...but never split an argument name in a table's first column. */
+.wy-table-responsive table td:first-child code {
+  white-space: nowrap;
+}
+
+/* Light header behind the transparent logo: the theme's default blue makes
+   the logo's navy text unreadable. The lavender matches the logo's halo. */
+.wy-side-nav-search {
+  background-color: #f4f2fb;
+}
+.wy-side-nav-search input[type="text"] {
+  border-color: #d6d1ec;
+}
+/* Version label shown under the logo on Read the Docs (white by default). */
+.wy-side-nav-search > div.version,
+.wy-side-nav-search .switch-menus {
+  color: #27295f;
+}
+
+/* Keep the square logo from dominating the sidebar. */
+.wy-side-nav-search .wy-dropdown > a img.logo,
+.wy-side-nav-search > a img.logo {
+  max-width: 150px;
+}

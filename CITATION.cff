@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "CausalIG: Causal Integrated Gradients"
+type: software
+authors:
+  - family-names: Michiels
+    given-names: Joran
+    affiliation: KU Leuven
+  - family-names: Ismail
+    given-names: Anis
+    affiliation: KU Leuven
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/sifrimlab/CausalIG"
+url: "https://causalig.readthedocs.io"
+preferred-citation:
+  type: article
+  title: "Causal Integrated Gradients: Scalable Feature Attribution Along Causal Paths"
+  authors:
+    - family-names: Michiels
+      given-names: Joran
+    - family-names: Ismail
+      given-names: Anis
+    - family-names: De Vos
+      given-names: Maarten
+    - family-names: Sifrim
+      given-names: Alejandro
+  journal: "arXiv preprint"
+  year: 2026
