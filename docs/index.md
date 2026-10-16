@@ -43,13 +43,13 @@ coalition sampling instead, which becomes prohibitive at high dimension.
 ## Citation
 
 > J. Michiels\*, A. Ismail\*, M. De Vos, A. Sifrim. *Causal Integrated Gradients: Scalable Feature
-> Attribution Along Causal Paths.* arXiv preprint, 2026. (\* equal contribution)
+> Attribution Along Causal Paths.* arXiv preprint, 2026. [arXiv:2610.22126](https://arxiv.org/abs/2610.22126) (\* equal contribution)
 
 ```bibtex
 @article{michiels2026causalig,
   title   = {Causal Integrated Gradients: Scalable Feature Attribution Along Causal Paths},
   author  = {Michiels, Joran and Ismail, Anis and De Vos, Maarten and Sifrim, Alejandro},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  journal = {arXiv preprint arXiv:2610.22126},
   year    = {2026},
 }
 ```

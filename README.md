@@ -39,7 +39,7 @@
 
 Official implementation of **Causal Integrated Gradients (CIG)** and **Causal Expected Gradients (CEG)**: principled extensions of Integrated Gradients that incorporate causal relationships between input features, while preserving its axiomatic guarantees and scalability. By reparametrizing the integration path to follow the causal structure of the inputs, CIG/CEG decompose each feature's attribution into a **direct** effect and **indirect** effects mediated through its causal descendants, scaling to high-dimensional settings where existing dependency-aware methods (conditional SHAP, causal Shapley values) become computationally prohibitive.
 
-> **Paper**: J. Michiels\*, A. Ismail\*, M. De Vos, A. Sifrim. *Causal Integrated Gradients: Scalable Feature Attribution Along Causal Paths.* arXiv preprint, 2026. [arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX) (\* equal contribution)
+> **Paper**: J. Michiels\*, A. Ismail\*, M. De Vos, A. Sifrim. *Causal Integrated Gradients: Scalable Feature Attribution Along Causal Paths.* arXiv preprint, 2026. [arXiv:2610.22126](https://arxiv.org/abs/2610.22126) (\* equal contribution)
 
 ---
 
@@ -286,7 +286,7 @@ If you use this code, please cite:
 @article{michiels2026causalig,
   title   = {Causal Integrated Gradients: Scalable Feature Attribution Along Causal Paths},
   author  = {Michiels, Joran and Ismail, Anis and De Vos, Maarten and Sifrim, Alejandro},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  journal = {arXiv preprint arXiv:2610.22126},
   year    = {2026},
 }
 ```
