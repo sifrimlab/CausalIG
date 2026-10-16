@@ -9,8 +9,8 @@
 <!-- MARKDOWN LINKS & IMAGES -->
 [ci-shield]: https://img.shields.io/github/actions/workflow/status/sifrimlab/CausalIG/ci.yml?branch=main&style=for-the-badge&label=CI
 [ci-url]: https://github.com/sifrimlab/CausalIG/actions/workflows/ci.yml
-[docs-shield]: https://img.shields.io/readthedocs/causalig?style=for-the-badge&label=docs
-[docs-url]: https://causalig.readthedocs.io/en/latest/
+[docs-shield]: https://img.shields.io/badge/docs-done-green?style=for-the-badge
+[docs-url]: https://sifrimlab.org/CausalIG/
 [contributors-shield]: https://img.shields.io/github/contributors/sifrimlab/CausalIG.svg?style=for-the-badge
 [contributors-url]: https://github.com/sifrimlab/CausalIG/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/sifrimlab/CausalIG.svg?style=for-the-badge
@@ -23,7 +23,7 @@
 [license-url]: https://github.com/sifrimlab/CausalIG/blob/main/LICENSE
 
 
-
+﻿
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
